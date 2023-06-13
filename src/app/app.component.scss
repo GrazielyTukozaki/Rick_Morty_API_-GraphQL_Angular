@@ -1,0 +1,7 @@
+.container{
+    padding: 3rem 2rem;
+    background-color: var(--primary-color-dark);
+    &_title{
+        color: var(--secondary-color);
+    }
+}
