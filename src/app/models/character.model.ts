@@ -1,30 +1,23 @@
-export class Character {
-  name: string;
-  species: string;
-  status: string;
-  type: string;
-  gender: string;
-  origin: string;
-  location: string;
-  image: string;
+export interface APIResponse<T> {
+  results: T;
+}
 
-  constructor(
-    name: string,
-    species: string,
-    status: string,
-    type: string,
-    gender: string,
-    origin: string,
-    location: string,
-    image: string
-  ) {
-    this.name = name;
-    this.species = species;
-    this.status = status;
-    this.type = type;
-    this.gender = gender;
-    this.origin = origin;
-    this.location = location;
-    this.image = image;
-  }
+export interface DataResponse {
+  characters: APIResponse<Character[]>;
+  episodes: APIResponse<Episode[]>;
+}
+
+export interface Episode {
+  name: string;
+  episode: string;
+}
+
+export interface Character {
+  id: number;
+  name: string;
+  status: string;
+  species: string;
+  gender: string;
+  image: string;
+  isFavorite?: boolean;
 }

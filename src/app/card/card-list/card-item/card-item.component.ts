@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Character } from 'src/app/models/character.model';
 import { MatCardModule } from '@angular/material/card';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-card-item',
@@ -10,5 +11,5 @@ import { MatCardModule } from '@angular/material/card';
   imports: [MatCardModule],
 })
 export class CardItemComponent {
-  @Input() public character!: Character;
+  @Input() character!: Character;
 }

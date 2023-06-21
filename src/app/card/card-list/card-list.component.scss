@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    padding-bottom: 2rem;
+    &_card-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+}
