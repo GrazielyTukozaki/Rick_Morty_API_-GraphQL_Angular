@@ -1,14 +1,12 @@
 <div class="container">
-    <div *ngIf="character$ | async as character" class="container_wrapper-item">
-        <app-card-item [character]="{
-            name: character.name,
-            species: character.species,
-            status: character.status,
-            type: character.type,
-            gender: character.gender,
-            origin: character.origin,
-            location: character.location,
-            image: character.image
-        }" />
-    </div>
+  <!-- NG CONTAINER WITH CARDS -->
+  <div *ngIf="characters$ | async as characters" class="container_card-wrapper">
+    <ng-container *ngIf="characters.length; else showEmpty">
+      <app-card-item *ngFor="let character of characters" [character]="character"></app-card-item>
+    </ng-container>
+  </div>
+  <!-- NOT RESULT TEMPLATE -->
+  <ng-template #showEmpty>
+    <!-- <app-not-found title="" message="Not data found" [img]="{height: 250, width: 450, src: 'assets/imgs/404.svg' }"></app-not-found>-->
+  </ng-template>
 </div>

@@ -1,7 +1,7 @@
-<form class="container" [formGroup]="searchForm" (ngSubmit)="search()">
+<form class="container">
     <input type="text" placeholder="Search your favorite character here" class="container_search-item"
-        formControlName="searchTerm" [value]="searchForm.value.searchTerm" />
-    <button class="container_search-icon" type="submit">
+        [formControl]="search">
+    <button class="container_search-icon" (click)="onClear()">
         <mat-icon>search</mat-icon>
     </button>
 

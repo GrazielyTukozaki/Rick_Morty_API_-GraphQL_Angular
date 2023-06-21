@@ -1,19 +1,14 @@
-<mat-card>
-    <img mat-card-image [src]="character.image" [alt]="character.name">
+<mat-card class="container">
+    <figure>
+        <img [src]="character.image" [alt]="character.name" rel="preload" as="image" class="container_img">
+    </figure>
     <mat-card-header>
-        <h2> Name: {{character.name}}</h2>
+        <h2><b>Name: </b> {{character.name}}</h2>
     </mat-card-header>
     <mat-card-content>
-        <h3>Description:</h3>
-        <p> Status: {{character.status}}</p>
-        <p> Species: {{character.species}} </p>
-        <p> Type: {{character.type}}</p>
-        <p> Gender: {{character.gender}}</p>
-        <p> Origin: {{character.origin}}</p>
-        <p> Location: {{character.location}}</p>
+        <h2>Description</h2>
+        <p> <b>Status:</b> {{character.status}}</p>
+        <p> <b>Species:</b> {{character.species}} </p>
+        <p> <b>Gender:</b> {{character.gender}}</p>
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-    </mat-card-actions>
 </mat-card>
